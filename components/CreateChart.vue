@@ -17,9 +17,6 @@ export default {
   components: {
     // VueApexCharts
   },
-  mounted(){
-    console.log(this.categories)
-  },
   props: {
     typeXaxis: {
       type: String,

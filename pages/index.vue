@@ -171,7 +171,6 @@ export default {
   async mounted(){
     const rawdata = await this.$axios.$get(jsonWorldCup)
     this.dataWorldCup = JSON.parse(rawdata)
-    console.log(this.dataWorldCup)
     this.tournaments = this.dataWorldCup.tournaments
     this.selectedTournament = this.tournaments[0].tournament_id
     this.runAll()
@@ -202,7 +201,7 @@ export default {
           if(element.award_id === 'A-1') {
             this.goldenBall = `${element.given_name === 'not applicable' ? '' : element.given_name} ${element.family_name}`
           }
-          console.log(element)
+
           if(element.award_id === 'A-4') {
             this.goldenBoot = `${element.given_name === 'not applicable' ? '' : element.given_name} ${element.family_name}`
           }
@@ -219,17 +218,17 @@ export default {
       this.loading.award = false
     },
     async getHighestTotalGoal(){
-      let highest = -1
-      await this.dataWorldCup.team_appearances.forEach(element => {
-        if(element.goal_differential > highest) {
-          highest = element.goal_differential
-        }
-      })
-       await this.dataWorldCup.team_appearances.forEach(element => {
-        if(element.goal_differential === highest) {
-          console.log(element)
-        }
-      })
+      // let highest = -1
+      // await this.dataWorldCup.team_appearances.forEach(element => {
+      //   if(element.goal_differential > highest) {
+      //     highest = element.goal_differential
+      //   }
+      // })
+      //  await this.dataWorldCup.team_appearances.forEach(element => {
+      //   if(element.goal_differential === highest) {
+      //     console.log(element)
+      //   }
+      // })
 
     },
     async getRateHostWin() {
