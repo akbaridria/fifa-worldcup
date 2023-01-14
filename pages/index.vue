@@ -101,7 +101,7 @@
         <template v-if="!loading.award">
         <div class="flex flex-col items-center justify-center bg-slate-800 rounded-lg shadow-lg h-full p-5 hover:ring-2 hover:bg-blue-800 hover:rounded-lg">
           <div class="text-xl text-white/50">Golden Ball (Best Player)</div>
-          <div class="font-bold text-4xl">{{ goldenBall }}</div>
+          <div class="font-bold text-center text-4xl">{{ goldenBall }}</div>
           <div>{{ goldenBall ? null : `No Award For this category in ${selectedTournament}` }}</div>
         </div>
         <div class="flex flex-col items-center justify-center bg-slate-800 rounded-lg shadow-lg h-full p-5 hover:ring-2 hover:bg-blue-800 hover:rounded-lg">
@@ -116,7 +116,7 @@
         </div>
         <div class="flex flex-col items-center justify-center bg-slate-800 rounded-lg shadow-lg h-full p-5 hover:ring-2 hover:bg-blue-800 hover:rounded-lg">
           <div class="text-xl text-white/50">Best Young Player</div>
-          <div class="font-bold text-4xl">{{ bestYoung }}</div>
+          <div class="font-bold  text-4xl">{{ bestYoung }}</div>
           <div>{{ bestYoung ? null : `No Award For this category in ${selectedTournament}` }}</div>
         </div>
         </template>
